@@ -24,32 +24,30 @@ limitations under the License.
 
 > Round a numeric value to the nearest multiple of 10^n toward positive infinity.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-special-ceiln
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-ceiln = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ceiln@umd/bundle.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ceiln@umd/bundle.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.ceiln;
-})();
-</script>
+var ceiln = require( '@stdlib/math-base-special-ceiln' );
 ```
 
 #### ceiln( x, n )
@@ -99,14 +97,9 @@ v = ceiln( 12368.0, 3 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/bundle.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ceiln@umd/bundle.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var randu = require( '@stdlib/random-base-randu' );
+var ceiln = require( '@stdlib/math-base-special-ceiln' );
 
 var x;
 var n;
@@ -119,11 +112,6 @@ for ( i = 0; i < 100; i++ ) {
     v = ceiln( x, -n );
     console.log( 'x: %d. Number of decimals: %d. Rounded: %d.', x, n, v );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -212,6 +200,7 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 [deno-url]: https://github.com/stdlib-js/math-base-special-ceiln/tree/deno
 [umd-url]: https://github.com/stdlib-js/math-base-special-ceiln/tree/umd
 [esm-url]: https://github.com/stdlib-js/math-base-special-ceiln/tree/esm
+[branches-url]: https://github.com/stdlib-js/math-base-special-ceiln/blob/main/branches.md
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/math-base-special-ceiln/main/LICENSE
 
@@ -219,13 +208,13 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/special/ceil]: https://github.com/stdlib-js/math-base-special-ceil/tree/umd
+[@stdlib/math/base/special/ceil]: https://github.com/stdlib-js/math-base-special-ceil
 
-[@stdlib/math/base/special/ceilb]: https://github.com/stdlib-js/math-base-special-ceilb/tree/umd
+[@stdlib/math/base/special/ceilb]: https://github.com/stdlib-js/math-base-special-ceilb
 
-[@stdlib/math/base/special/floorn]: https://github.com/stdlib-js/math-base-special-floorn/tree/umd
+[@stdlib/math/base/special/floorn]: https://github.com/stdlib-js/math-base-special-floorn
 
-[@stdlib/math/base/special/roundn]: https://github.com/stdlib-js/math-base-special-roundn/tree/umd
+[@stdlib/math/base/special/roundn]: https://github.com/stdlib-js/math-base-special-roundn
 
 <!-- </related-links> -->
 
