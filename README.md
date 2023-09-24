@@ -18,44 +18,47 @@ limitations under the License.
 
 -->
 
+
+<details>
+  <summary>
+    About stdlib...
+  </summary>
+  <p>We believe in a future in which the web is a preferred environment for numerical computation. To help realize this future, we've built stdlib. stdlib is a standard library, with an emphasis on numerical and scientific computation, written in JavaScript (and C) for execution in browsers and in Node.js.</p>
+  <p>The library is fully decomposable, being architected in such a way that you can swap out and mix and match APIs and functionality to cater to your exact preferences and use cases.</p>
+  <p>When you use stdlib, you can be absolutely certain that you are using the most thorough, rigorous, well-written, studied, documented, tested, measured, and high-quality code out there.</p>
+  <p>To join us in bringing numerical computing to the web, get started by checking us out on <a href="https://github.com/stdlib-js/stdlib">GitHub</a>, and please consider <a href="https://opencollective.com/stdlib">financially supporting stdlib</a>. We greatly appreciate your continued support!</p>
+</details>
+
 # ceiln
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
 > Round a numeric value to the nearest multiple of 10^n toward positive infinity.
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-special-ceiln
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
+-   If you are using Deno, visit the [`deno` branch][deno-url].
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-ceiln = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ceiln@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var ceiln = require( 'path/to/vendor/umd/math-base-special-ceiln/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ceiln@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.ceiln;
-})();
-</script>
+var ceiln = require( '@stdlib/math-base-special-ceiln' );
 ```
 
 #### ceiln( x, n )
@@ -105,14 +108,9 @@ v = ceiln( 12368.0, 3 );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-ceiln@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var randu = require( '@stdlib/random-base-randu' );
+var ceiln = require( '@stdlib/math-base-special-ceiln' );
 
 var x;
 var n;
@@ -125,16 +123,106 @@ for ( i = 0; i < 100; i++ ) {
     v = ceiln( x, -n );
     console.log( 'x: %d. Number of decimals: %d. Rounded: %d.', x, n, v );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
 
 <!-- /.examples -->
+
+<!-- C interface documentation. -->
+
+* * *
+
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/math/base/special/ceiln.h"
+```
+
+#### stdlib_base_ceiln( x, n )
+
+Rounds a double-precision floating-point number to the nearest multiple of `10^n` toward positive infinity.
+
+```c
+// Round a value to 2 decimal places:
+double y = stdlib_base_ceiln( 3.141592653589793, -2 );
+// returns 3.15
+
+// If n = 0, `ceiln` behaves like `ceil`:
+double y = stdlib_base_ceiln( 3.141592653589793, 0 );
+// returns 4.0
+
+// Round a value to the nearest thousand:
+double y = stdlib_base_ceiln( 12368.0, 3 );
+// returns 13000.0
+```
+
+The function accepts the following arguments:
+
+-   **x**: `[in] double` input value.
+-   **n**: `[in] int32_t` integer power of 10.
+
+```c
+double stdlib_base_ceiln( const double x, const int32_t n );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/math/base/special/ceiln.h"
+#include <stdio.h>
+
+int main() {
+    const double x[] = { 3.14, -3.14, 0.0, 0.0/0.0 };
+
+    double y;
+    int i;
+    for ( i = 0; i < 4; i++ ) {
+        y = stdlib_base_ceiln( x[ i ], -2 );
+        printf( "ceiln(%lf, -2) = %lf\n", x[ i ], y );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -192,8 +280,8 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/math-base-special-ceiln.svg
 [npm-url]: https://npmjs.org/package/@stdlib/math-base-special-ceiln
 
-[test-image]: https://github.com/stdlib-js/math-base-special-ceiln/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/math-base-special-ceiln/actions/workflows/test.yml?query=branch:main
+[test-image]: https://github.com/stdlib-js/math-base-special-ceiln/actions/workflows/test.yml/badge.svg?branch=v0.1.0
+[test-url]: https://github.com/stdlib-js/math-base-special-ceiln/actions/workflows/test.yml?query=branch:v0.1.0
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/math-base-special-ceiln/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/math-base-special-ceiln?branch=main
@@ -226,13 +314,13 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/special/ceil]: https://github.com/stdlib-js/math-base-special-ceil/tree/umd
+[@stdlib/math/base/special/ceil]: https://github.com/stdlib-js/math-base-special-ceil
 
-[@stdlib/math/base/special/ceilb]: https://github.com/stdlib-js/math-base-special-ceilb/tree/umd
+[@stdlib/math/base/special/ceilb]: https://github.com/stdlib-js/math-base-special-ceilb
 
-[@stdlib/math/base/special/floorn]: https://github.com/stdlib-js/math-base-special-floorn/tree/umd
+[@stdlib/math/base/special/floorn]: https://github.com/stdlib-js/math-base-special-floorn
 
-[@stdlib/math/base/special/roundn]: https://github.com/stdlib-js/math-base-special-roundn/tree/umd
+[@stdlib/math/base/special/roundn]: https://github.com/stdlib-js/math-base-special-roundn
 
 <!-- </related-links> -->
 
