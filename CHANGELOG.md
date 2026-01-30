@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-06-20)
+## Unreleased (2026-01-30)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`7add020`](https://github.com/stdlib-js/stdlib/commit/7add0201c13e56a0381926ccfd4073c84eaf2ed4) - **test:** use standardized assertion messages and fix lint errors _(by Philipp Burckhardt)_
 -   [`f63f8df`](https://github.com/stdlib-js/stdlib/commit/f63f8df9abf7a7ddf9de4e895a64e4699d2f378b) - **style:** remove header section comments from C files _(by Philipp Burckhardt)_
 -   [`57efa3d`](https://github.com/stdlib-js/stdlib/commit/57efa3d9de9c4c2f0a94387079e356dad7649a40) - **chore:** rename C files to follow current project conventions [(#6410)](https://github.com/stdlib-js/stdlib/pull/6410) _(by Karan Anand, stdlib-bot)_
 -   [`ef90f52`](https://github.com/stdlib-js/stdlib/commit/ef90f526214e3797a5cf1db3fb7e0e79155ac7d5) - **chore:** replace `pow` with `stdlib_base_pow` [(#6366)](https://github.com/stdlib-js/stdlib/pull/6366) _(by Karan Anand)_
