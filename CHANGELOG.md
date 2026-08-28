@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-08-27)
+## Unreleased (2026-08-28)
 
 <section class="commits">
 
@@ -12,6 +12,8 @@
 
 <details>
 
+-   [`e67a5aa`](https://github.com/stdlib-js/stdlib/commit/e67a5aad659d8f6623e4ab8ac94687a8586ea83a) - **docs:** update Markdown equation elements _(by stdlib-bot)_
+-   [`85f4853`](https://github.com/stdlib-js/stdlib/commit/85f48534ef6908bbcd982d48f1c5fbea3fb7aafd) - **docs:** update Markdown equation SVGs _(by stdlib-bot)_
 -   [`b69f125`](https://github.com/stdlib-js/stdlib/commit/b69f125e64207b556cf745414f2d67b59758b514) - **docs:** add equations [(#14689)](https://github.com/stdlib-js/stdlib/pull/14689) _(by Karan Anand)_
 -   [`6b79aec`](https://github.com/stdlib-js/stdlib/commit/6b79aece2b82996d0fcf00ca8f670fb5e466fd0f) - **test:** migrate `math/base/special/ceiln` to ULP-based testing [(#12751)](https://github.com/stdlib-js/stdlib/pull/12751) _(by Philipp Burckhardt)_
 -   [`906bab9`](https://github.com/stdlib-js/stdlib/commit/906bab98b9f33bc8c3a92e58eeafa2942990d5ab) - **docs:** propagate lint and example fixes to `math` and `stats` siblings [(#12146)](https://github.com/stdlib-js/stdlib/pull/12146) _(by Philipp Burckhardt)_
